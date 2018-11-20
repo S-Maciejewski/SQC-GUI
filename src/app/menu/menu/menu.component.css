@@ -1,0 +1,10 @@
+.menu{
+    margin: auto auto;
+    width: 95%;
+    height: 95%;
+    /* background-color: #e65400; */
+
+}    
+mat-card-title{
+    text-align: center;
+}
