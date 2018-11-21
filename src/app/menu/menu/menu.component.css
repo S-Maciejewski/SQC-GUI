@@ -5,6 +5,7 @@
     /* background-color: #e65400; */
 
 }    
-mat-card-title{
+.title{
     text-align: center;
+    width: 100%;
 }

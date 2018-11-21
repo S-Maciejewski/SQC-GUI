@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  drawerOpened = true;
+
   constructor() { }
 
   ngOnInit() {
+    
   }
 
+  toggleDrawer(){
+    this.drawerOpened = !this.drawerOpened;
+    console.log("drawerOpened set to ", this.drawerOpened);
+  }
 }
