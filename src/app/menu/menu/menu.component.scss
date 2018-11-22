@@ -1,0 +1,32 @@
+.drawerContainer{
+    width: 100%;
+    height: 100%;
+    // background-color: #001055;
+    overflow: hidden;
+}    
+.title{
+    text-align: center;
+    width: 100%;
+} 
+mat-drawer{
+    height: 100%;
+    width: 500px;
+    overflow: hidden !important;
+    background-color: lightgray;
+    p{
+        text-align: center;
+        font-size: 24px;
+    }
+    textarea{
+        display: block;
+        resize: none;
+        width: 90%;
+        margin: auto auto;
+        margin-top: 2%;
+    } 
+}
+.drawerButton{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

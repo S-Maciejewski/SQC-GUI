@@ -1,13 +1,11 @@
-<div class="menu">
-  <mat-drawer-container class="drawerContainer" [hasBackdrop]="true">
-    <mat-drawer #drawer mode="side" [(opened)]="drawerOpened">
-      <textarea ngModel="jsonInput" name="input" matInput placeholder="JSON Scenario" rows="3"></textarea>
+<mat-drawer-container class="drawerContainer" [hasBackdrop]="true">
+    <mat-drawer #drawer mode="over" [(opened)]="drawerOpened">
+      <p>Place your scenario here</p>
+      <textarea ngModel="input" class="input" matInput placeholder="Scenario input" rows="30" wrap="off"></textarea>
     </mat-drawer>
     <mat-drawer-content>
-      <button mat-button (click)="toggleDrawer()">Toogle</button>
+      <button class="drawerButton" mat-button (click)="toggleDrawer()">Toogle</button>
     </mat-drawer-content>
-  </mat-drawer-container>
+</mat-drawer-container>
 
-  
-</div>
 
