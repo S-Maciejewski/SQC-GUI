@@ -1,10 +1,18 @@
-<mat-drawer-container class="drawerContainer" [hasBackdrop]="true">
+<!-- <mat-drawer-container class="drawerContainer" [hasBackdrop]="true"> -->
+<mat-drawer-container class="drawerContainer">
     <mat-drawer #drawer mode="over" [(opened)]="drawerOpened">
-      <p>Place your scenario here</p>
-      <textarea ngModel="input" class="input" matInput placeholder="Scenario input" rows="30" wrap="off"></textarea>
+        <mat-card>
+            <mat-card-title>Place your scenario here</mat-card-title>
+        </mat-card>
+        <textarea ngModel="input" class="input" matInput placeholder="Scenario input" rows="30" wrap="off"></textarea>
+
     </mat-drawer>
     <mat-drawer-content>
-      <button class="drawerButton" mat-button (click)="toggleDrawer()">Toogle</button>
+      <mat-card>
+        <mat-card-title>Scenario Quality Checker</mat-card-title>
+        <app-scenario></app-scenario>
+      </mat-card>
+      <button class="drawerButton" mat-button (click)="toggleDrawer()">Toogle scenario input</button>
     </mat-drawer-content>
 </mat-drawer-container>
 

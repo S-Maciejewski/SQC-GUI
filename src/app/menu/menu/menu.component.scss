@@ -23,10 +23,13 @@ mat-drawer{
         width: 90%;
         margin: auto auto;
         margin-top: 2%;
-    } 
+    }
 }
 .drawerButton{
     position: absolute;
     right: 10px;
     top: 10px;
+}
+mat-card-title{
+    text-align: center;
 }

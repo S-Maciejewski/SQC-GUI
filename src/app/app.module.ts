@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { MaterialModule } from './material.module';
+import { ScenarioComponent } from './components/scenario/scenario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    ScenarioComponent
   ],
   imports: [
     BrowserModule,

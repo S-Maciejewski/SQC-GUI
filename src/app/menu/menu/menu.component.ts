@@ -17,6 +17,5 @@ export class MenuComponent implements OnInit {
 
   toggleDrawer(){
     this.drawerOpened = !this.drawerOpened;
-    console.log("drawerOpened set to ", this.drawerOpened);
   }
 }
