@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpParams, HttpClient, HttpHeaders } from "@angular/common/http";
 
-const apiAdress = 'http://localhost:8090';
+const apiAdress = 'http://localhost:8090/';
 
 const api = {
   showScenario: 'showScenario',
@@ -21,6 +21,8 @@ export class HttpHelper {
   // private handleError : HandleError
 
   getSteps(http: HttpClient, scenario: string) {
+    console.log(http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
+    console.log(scenario);
     return (http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
   }
 

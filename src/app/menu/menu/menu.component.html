@@ -4,7 +4,7 @@
         <mat-card>
             <mat-card-title>Scenario input</mat-card-title>
         </mat-card>
-        <textarea ngModel="input" class="input" matInput placeholder="Place your scenario here" rows="42" wrap="off"></textarea>
+        <textarea [(ngModel)]="input" class="input" matInput placeholder="Place your scenario here" rows="42" wrap="off"></textarea>
         <button class="closeDrawerButton" mat-button (click)="toggleDrawer()">Close drawer</button>
     </mat-drawer>
     <mat-drawer-content>

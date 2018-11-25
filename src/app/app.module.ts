@@ -6,7 +6,8 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { MaterialModule } from './material.module';
 import { ScenarioComponent } from './components/scenario/scenario.component';
 import { HttpHelper } from './utils/HttpHelper.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpHelper],
   bootstrap: [AppComponent]

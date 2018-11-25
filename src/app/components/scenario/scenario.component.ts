@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ScenarioComponent implements OnInit {
 
-  getInput: Function;
+  menu: MenuComponent;
   httpHelper: HttpHelper;
   http: HttpClient;
 
@@ -18,7 +18,7 @@ export class ScenarioComponent implements OnInit {
     helper: HttpHelper,
     httpClient: HttpClient) {
     this.httpHelper = helper;
-    this.getInput = menu.getScenarioInput;
+    this.menu = menu;
     this.http = httpClient;
   }
 
@@ -27,7 +27,6 @@ export class ScenarioComponent implements OnInit {
 
 
   getSteps() {
-    console.log('getSteps called in scenario component');
-    this.httpHelper.getSteps(this.http, this.getInput());
+    this.httpHelper.getSteps(this.http, this.menu.getScenarioInput());
   }
 }
