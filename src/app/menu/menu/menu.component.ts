@@ -17,8 +17,8 @@ export class MenuComponent implements OnInit {
   }
 
   getScenarioInput() {
-    console.log('getInput @ menu.component', JSON.stringify(this.input));
-    return JSON.stringify(this.input);
+    // console.log('getInput @ menu.component', JSON.parse(this.input));
+    return JSON.parse(this.input);
   }
 
   toggleDrawer() {

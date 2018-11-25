@@ -27,6 +27,8 @@ export class ScenarioComponent implements OnInit {
 
 
   getSteps() {
-    this.httpHelper.getSteps(this.http, this.menu.getScenarioInput());
+    this.httpHelper.getSteps(this.http, this.menu.getScenarioInput()).subscribe((data) =>{
+      console.log(data);
+    });
   }
 }

@@ -21,8 +21,8 @@ export class HttpHelper {
   // private handleError : HandleError
 
   getSteps(http: HttpClient, scenario: string) {
+    console.log('scenario @ HttpHelper', scenario);
     console.log(http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
-    console.log(scenario);
     return (http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
   }
 
