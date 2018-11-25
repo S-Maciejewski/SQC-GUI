@@ -8,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   drawerOpened = true;
+  input : String;
 
   constructor() { }
 
   ngOnInit() {
     
+  }
+
+  getScenarioInput(){
+    return this.input;
   }
 
   toggleDrawer(){

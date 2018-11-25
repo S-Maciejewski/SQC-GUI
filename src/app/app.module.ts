@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { MaterialModule } from './material.module';
 import { ScenarioComponent } from './components/scenario/scenario.component';
+import { HttpHelper } from './utils/HttpHelper.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { ScenarioComponent } from './components/scenario/scenario.component';
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpHelper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

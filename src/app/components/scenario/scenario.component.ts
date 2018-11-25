@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpHelper } from '../../utils/HttpHelper.service';
+import { MenuComponent } from 'src/app/menu/menu/menu.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-scenario',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenarioComponent implements OnInit {
 
-  constructor() { }
+  getInput: Function;
+  httpHelper: HttpHelper;
+  http: HttpClient;
+
+  constructor(menu: MenuComponent,
+    helper: HttpHelper,
+    httpClient: HttpClient) {
+    this.httpHelper = helper;
+    this.getInput = menu.getScenarioInput;
+    this.http = httpClient;
+  }
 
   ngOnInit() {
   }
 
+
+  getSteps() {
+    console.log('getSteps called in scenario component');
+    this.httpHelper.getSteps(this.http, this.getInput());
+  }
 }
