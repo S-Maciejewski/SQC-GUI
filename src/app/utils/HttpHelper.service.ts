@@ -23,8 +23,11 @@ export class HttpHelper {
 
   getSteps(http: HttpClient, scenario: string) {
     console.log('scenario @ HttpHelper', scenario);
-    console.log(http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
     return (http.post(apiAdress + api.showScenario, JSON.stringify(scenario), httpOptions));
   }
 
+  getDepthSteps(http: HttpClient, scenario: string, depth: number) {
+    console.log('scenario @ HttpHelper', scenario);
+    return (http.post(apiAdress + api.showScenario + '/' + depth, JSON.stringify(scenario), httpOptions));
+  }
 }

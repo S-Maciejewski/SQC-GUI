@@ -8,15 +8,16 @@ export class Steps {
 }
 
 @Component({
-  selector: 'app-scenario',
-  templateUrl: './scenario.component.html',
-  styleUrls: ['./scenario.component.scss']
+  selector: 'app-depth-scenario',
+  templateUrl: './depth-scenario.component.html',
+  styleUrls: ['./depth-scenario.component.scss']
 })
-export class ScenarioComponent implements OnInit {
+export class DepthScenarioComponent implements OnInit {
 
   menu: MenuComponent;
   httpHelper: HttpHelper;
   http: HttpClient;
+  depth: any = 2;
   output: any;
 
   constructor(menu: MenuComponent,
@@ -28,7 +29,6 @@ export class ScenarioComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   parseResponse(data: Steps) {
@@ -43,9 +43,9 @@ export class ScenarioComponent implements OnInit {
     return output;
   }
 
-  getSteps() {
+  getStepsWithDepth() {
     this.output = 'An error occured, sorry';
-    this.httpHelper.getSteps(this.http, this.menu.getScenarioInput()).subscribe((data) => {
+    this.httpHelper.getDepthSteps(this.http, this.menu.getScenarioInput(), this.depth).subscribe((data) => {
       if (data.hasOwnProperty('steps')) {
         this.output = this.parseResponse(<Steps>data);
       }

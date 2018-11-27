@@ -8,12 +8,14 @@ import { ScenarioComponent } from './components/scenario/scenario.component';
 import { HttpHelper } from './utils/HttpHelper.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DepthScenarioComponent } from './components/depth-scenario/depth-scenario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ScenarioComponent
+    ScenarioComponent,
+    DepthScenarioComponent
   ],
   imports: [
     BrowserModule,
