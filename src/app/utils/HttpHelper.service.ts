@@ -5,6 +5,7 @@ const apiAdress = 'http://localhost:8090/';
 
 const api = {
   showScenario: 'showScenario',
+  countSteps: 'countSteps'
 }
 
 const httpOptions = {
