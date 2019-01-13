@@ -9,13 +9,15 @@ import { HttpHelper } from './utils/HttpHelper.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DepthScenarioComponent } from './components/depth-scenario/depth-scenario.component';
+import { StepCountComponent } from './components/step-count/step-count.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ScenarioComponent,
-    DepthScenarioComponent
+    DepthScenarioComponent,
+    StepCountComponent
   ],
   imports: [
     BrowserModule,
