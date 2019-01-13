@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpHelper } from '../../utils/HttpHelper.service';
 import { MenuComponent } from 'src/app/menu/menu/menu.component';
 import { HttpClient } from '@angular/common/http';
+import * as _ from 'underscore';
 
 export class Steps {
   steps: any;
@@ -17,7 +18,7 @@ export class DepthScenarioComponent implements OnInit {
   menu: MenuComponent;
   httpHelper: HttpHelper;
   http: HttpClient;
-  depth: any = 2;
+  depth: any;
   output: any;
 
   constructor(menu: MenuComponent,
@@ -41,6 +42,15 @@ export class DepthScenarioComponent implements OnInit {
       output += steps[i] + '\n';
     }
     return output;
+  }
+
+  isDepthCorrect() {
+    if(!_.isEmpty(this.depth))
+      if(this.depth.match(/^\d{1,}$/g))
+        return true;
+      else return false
+    else
+      return false;
   }
 
   getStepsWithDepth() {
